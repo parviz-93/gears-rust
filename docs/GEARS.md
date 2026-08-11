@@ -579,6 +579,25 @@ GTS schema-storage service for tool definitions and contracts.
 - [API](../gears/system/types-registry/types-registry/README.md)
 - [SDK](../gears/system/types-registry/types-registry-sdk/README.md)
 
+### Infrastructure Resource Manager
+#### Responsibility
+Provide the central orchestration layer and one management surface for all infrastructure and application resources, covering the resource type system, declarative deployments, day-2 lifecycle actions, and the resource graph.
+#### High Level Scenarios
+- [ ] p1 - manage every resource class through one API backed by a versioned GTS resource type registry
+- [ ] p1 - onboard provider adapters from a declarative adapter package in a single call
+- [ ] p1 - classify, preview, and apply declarative deployments with plan binding and duplicate-safe writes
+- [ ] p1 - execute changes in dependency order and durably, with revisions, unified history, and rollback
+- [ ] p1 - enforce tenant isolation, per-resource-type authorization, policy and quota gating, and audit on every operation
+- [ ] p1 - guard resources with management policy levels (full, no-delete, no-touch) and cascade delete of owned subtrees
+- [ ] p1 - expose a virtual resource graph with typed relationships and impact queries
+- [ ] p2 - run day-2 lifecycle actions, per-resource capabilities, and tags
+- [ ] p2 - discover existing provider estates into inventory and publish the topology data surface
+#### More details
+- [PRD](../gears/infrastructure-resource-manager/docs/PRD.md)
+- TODO: Design link
+- TODO: API link
+- TODO: SDK link
+
 ### Quota Enforcer
 #### Responsibility
 Track and enforce quotas, rate limits, and consumption policies across tenants, users, and workloads.
